@@ -1,17 +1,17 @@
 const r = [
-  "/_app/immutable/start-6b51a0c2.js",
+  "/_app/immutable/start-fd0c051d.js",
   "/_app/immutable/components/pages/_layout.svelte-3cffdd92.js",
   "/_app/immutable/assets/app-0d0d3954.css",
-  "/_app/immutable/components/error.svelte-23b8721e.js",
+  "/_app/immutable/components/error.svelte-c8da8126.js",
   "/_app/immutable/components/pages/_page.svelte-eb29e59c.js",
   "/_app/immutable/assets/_page-032622b6.css",
   "/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js",
-  "/_app/immutable/chunks/singletons-7700b6c6.js",
+  "/_app/immutable/chunks/singletons-011bc338.js",
   "/_app/immutable/chunks/index-3c1f63a2.js",
   "/_app/immutable/chunks/index-440be7a1.js",
   "/_app/immutable/chunks/_layout-1daba58d.js",
   "/_app/immutable/chunks/0-b3b44707.js",
-  "/_app/immutable/chunks/1-858cc575.js",
+  "/_app/immutable/chunks/1-4d56c23f.js",
   "/_app/immutable/chunks/2-e2dc97ae.js"
 ], m = [
   "/.nojekyll",
@@ -34,7 +34,7 @@ const r = [
   "/site.webmanifest",
   "/songs.json",
   "/version.txt"
-], o = "1665258285612", a = self, i = `cache${o}`, p = r.concat(m), h = new Set(p);
+], o = "1665258304025", a = self, i = `cache${o}`, p = r.concat(m), h = new Set(p);
 a.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(i).then((s) => s.addAll(p)).then(() => {
