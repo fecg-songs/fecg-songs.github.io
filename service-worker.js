@@ -1,19 +1,19 @@
-const m = [
-  "/_app/immutable/start-a1c7a3b9.js",
+const r = [
+  "/_app/immutable/start-a9291da3.js",
   "/_app/immutable/components/pages/_layout.svelte-be3ff5a0.js",
   "/_app/immutable/assets/_layout-44b12aff.css",
-  "/_app/immutable/components/error.svelte-763db1ba.js",
-  "/_app/immutable/components/pages/_page.svelte-7b7df9d9.js",
+  "/_app/immutable/components/error.svelte-1f0e2564.js",
+  "/_app/immutable/components/pages/_page.svelte-7ff87dbb.js",
   "/_app/immutable/assets/_page-032622b6.css",
   "/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js",
-  "/_app/immutable/chunks/singletons-145c2a37.js",
+  "/_app/immutable/chunks/singletons-63b7fc6f.js",
   "/_app/immutable/chunks/index-3c1f63a2.js",
   "/_app/immutable/chunks/index-440be7a1.js",
   "/_app/immutable/chunks/_layout-1daba58d.js",
   "/_app/immutable/chunks/0-5bd5820a.js",
-  "/_app/immutable/chunks/1-b8337367.js",
-  "/_app/immutable/chunks/2-c4ee6255.js"
-], r = [
+  "/_app/immutable/chunks/1-1742daae.js",
+  "/_app/immutable/chunks/2-814f6778.js"
+], m = [
   "/.nojekyll",
   "/android-chrome-192x192.png",
   "/android-chrome-512x512.png",
@@ -32,8 +32,9 @@ const m = [
   "/robots.txt",
   "/safari-pinned-tab.svg",
   "/site.webmanifest",
-  "/songs.json"
-], o = "1665248312231", a = self, i = `cache${o}`, p = m.concat(r), h = new Set(p);
+  "/songs.json",
+  "/version.txt"
+], o = "1665251952041", a = self, i = `cache${o}`, p = r.concat(m), h = new Set(p);
 a.addEventListener("install", (s) => {
   s.waitUntil(
     caches.open(i).then((e) => e.addAll(p)).then(() => {
