@@ -1,19 +1,20 @@
 const m = [
-  "/_app/immutable/start-1c530248.js",
+  "/_app/immutable/start-e4755afb.js",
   "/_app/immutable/components/pages/_layout.svelte-3cffdd92.js",
   "/_app/immutable/assets/app-0d0d3954.css",
-  "/_app/immutable/components/error.svelte-0b5d32e2.js",
+  "/_app/immutable/components/error.svelte-15fabfe4.js",
   "/_app/immutable/components/pages/_page.svelte-52030827.js",
   "/_app/immutable/assets/_page-032622b6.css",
   "/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js",
-  "/_app/immutable/chunks/singletons-ba961855.js",
+  "/_app/immutable/chunks/singletons-16a63478.js",
   "/_app/immutable/chunks/index-3c1f63a2.js",
   "/_app/immutable/chunks/index-440be7a1.js",
   "/_app/immutable/chunks/_layout-1daba58d.js",
   "/_app/immutable/chunks/0-b3b44707.js",
-  "/_app/immutable/chunks/1-b83c7c7c.js",
+  "/_app/immutable/chunks/1-78792a1c.js",
   "/_app/immutable/chunks/2-76596e76.js"
 ], r = [
+  "/.nojekyll",
   "/android-chrome-192x192.png",
   "/android-chrome-512x512.png",
   "/apple-touch-icon.png",
@@ -32,7 +33,7 @@ const m = [
   "/safari-pinned-tab.svg",
   "/site.webmanifest",
   "/songs.json"
-], o = "1665261993123", a = self, i = `cache${o}`, p = m.concat(r), h = new Set(p);
+], o = "1665262399165", a = self, i = `cache${o}`, p = m.concat(r), h = new Set(p);
 a.addEventListener("install", (s) => {
   s.waitUntil(
     caches.open(i).then((e) => e.addAll(p)).then(() => {
@@ -55,17 +56,17 @@ async function u(s) {
     const t = await fetch(s);
     return e.put(s, t.clone()), t;
   } catch (t) {
-    const c = await e.match(s);
-    if (c)
-      return c;
+    const n = await e.match(s);
+    if (n)
+      return n;
     throw t;
   }
 }
 a.addEventListener("fetch", (s) => {
   if (s.request.method !== "GET" || s.request.headers.has("range"))
     return;
-  const e = new URL(s.request.url), t = e.protocol.startsWith("http"), c = e.hostname === self.location.hostname && e.port !== self.location.port, n = e.host === self.location.host && h.has(e.pathname), l = s.request.cache === "only-if-cached" && !n;
-  t && !c && !l && s.respondWith(
-    (async () => n && await caches.match(s.request) || u(s.request))()
+  const e = new URL(s.request.url), t = e.protocol.startsWith("http"), n = e.hostname === self.location.hostname && e.port !== self.location.port, c = e.host === self.location.host && h.has(e.pathname), l = s.request.cache === "only-if-cached" && !c;
+  t && !n && !l && s.respondWith(
+    (async () => c && await caches.match(s.request) || u(s.request))()
   );
 });
