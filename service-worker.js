@@ -1,17 +1,17 @@
 const m = [
-  "/_app/immutable/start-e5776c52.js",
+  "/_app/immutable/start-adb1de0d.js",
   "/_app/immutable/components/pages/_layout.svelte-be3ff5a0.js",
   "/_app/immutable/assets/_layout-0119d4f8.css",
-  "/_app/immutable/components/error.svelte-afebf49c.js",
+  "/_app/immutable/components/error.svelte-5b14a9f0.js",
   "/_app/immutable/components/pages/_page.svelte-f437ebf0.js",
   "/_app/immutable/assets/_page-032622b6.css",
   "/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js",
-  "/_app/immutable/chunks/singletons-87a17765.js",
+  "/_app/immutable/chunks/singletons-af96b3cb.js",
   "/_app/immutable/chunks/index-3c1f63a2.js",
   "/_app/immutable/chunks/index-440be7a1.js",
   "/_app/immutable/chunks/_layout-1daba58d.js",
   "/_app/immutable/chunks/0-5bd5820a.js",
-  "/_app/immutable/chunks/1-e259cfb7.js",
+  "/_app/immutable/chunks/1-c8dab809.js",
   "/_app/immutable/chunks/2-40d5a31d.js"
 ], r = [
   "/.nojekyll",
@@ -33,40 +33,40 @@ const m = [
   "/safari-pinned-tab.svg",
   "/site.webmanifest",
   "/songs.json"
-], o = "1665381622426", a = self, i = `cache${o}`, p = m.concat(r), h = new Set(p);
-a.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches.open(i).then((s) => s.addAll(p)).then(() => {
+], o = "1665384186710", a = self, i = `cache${o}`, p = m.concat(r), h = new Set(p);
+a.addEventListener("install", (s) => {
+  s.waitUntil(
+    caches.open(i).then((e) => e.addAll(p)).then(() => {
       a.skipWaiting();
     })
   );
 });
-a.addEventListener("activate", (e) => {
-  e.waitUntil(
-    caches.keys().then(async (s) => {
-      for (const t of s)
+a.addEventListener("activate", (s) => {
+  s.waitUntil(
+    caches.keys().then(async (e) => {
+      for (const t of e)
         t !== i && await caches.delete(t);
       a.clients.claim();
     })
   );
 });
-async function u(e) {
-  const s = await caches.open(`offline${o}`);
+async function u(s) {
+  const e = await caches.open(`offline${o}`);
   try {
-    const t = await fetch(e);
-    return s.put(e, t.clone()), t;
+    const t = await fetch(s);
+    return e.put(s, t.clone()), t;
   } catch (t) {
-    const n = await s.match(e);
+    const n = await e.match(s);
     if (n)
       return n;
     throw t;
   }
 }
-a.addEventListener("fetch", (e) => {
-  if (e.request.method !== "GET" || e.request.headers.has("range"))
+a.addEventListener("fetch", (s) => {
+  if (s.request.method !== "GET" || s.request.headers.has("range"))
     return;
-  const s = new URL(e.request.url), t = s.protocol.startsWith("http"), n = s.hostname === self.location.hostname && s.port !== self.location.port, c = s.host === self.location.host && h.has(s.pathname), l = e.request.cache === "only-if-cached" && !c;
-  t && !n && !l && e.respondWith(
-    (async () => c && await caches.match(e.request) || u(e.request))()
+  const e = new URL(s.request.url), t = e.protocol.startsWith("http"), n = e.hostname === self.location.hostname && e.port !== self.location.port, c = e.host === self.location.host && h.has(e.pathname), l = s.request.cache === "only-if-cached" && !c;
+  t && !n && !l && s.respondWith(
+    (async () => c && await caches.match(s.request) || u(s.request))()
   );
 });
