@@ -1,18 +1,18 @@
 const m = [
-  "/_app/immutable/start-3c34002f.js",
-  "/_app/immutable/components/pages/_layout.svelte-be3ff5a0.js",
-  "/_app/immutable/assets/_layout-0119d4f8.css",
-  "/_app/immutable/components/error.svelte-b640e847.js",
-  "/_app/immutable/components/pages/_page.svelte-beadc9ff.js",
+  "/_app/immutable/start-d57717cb.js",
+  "/_app/immutable/components/pages/_layout.svelte-c8d86822.js",
+  "/_app/immutable/assets/_layout-dc757474.css",
+  "/_app/immutable/components/error.svelte-341c894e.js",
+  "/_app/immutable/components/pages/_page.svelte-a2f4dde2.js",
   "/_app/immutable/assets/_page-032622b6.css",
   "/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js",
-  "/_app/immutable/chunks/singletons-70be9d5f.js",
-  "/_app/immutable/chunks/index-3c1f63a2.js",
-  "/_app/immutable/chunks/index-440be7a1.js",
+  "/_app/immutable/chunks/singletons-67c51e98.js",
+  "/_app/immutable/chunks/index-c78e2649.js",
+  "/_app/immutable/chunks/index-b5ffb61b.js",
   "/_app/immutable/chunks/_layout-1daba58d.js",
-  "/_app/immutable/chunks/0-5bd5820a.js",
-  "/_app/immutable/chunks/1-1e0464bc.js",
-  "/_app/immutable/chunks/2-bc0be5a0.js"
+  "/_app/immutable/chunks/0-2c99e7b8.js",
+  "/_app/immutable/chunks/1-ed1b1a02.js",
+  "/_app/immutable/chunks/2-b26740ec.js"
 ], r = [
   "/.nojekyll",
   "/android-chrome-192x192.png",
@@ -32,7 +32,7 @@ const m = [
   "/robots.txt",
   "/site.webmanifest",
   "/songs.json"
-], o = "1665847286196", a = self, i = `cache${o}`, p = m.concat(r), h = new Set(p);
+], o = "1666523165480", a = self, i = `cache${o}`, p = m.concat(r), h = new Set(p);
 a.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(i).then((s) => s.addAll(p)).then(() => {
