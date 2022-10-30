@@ -1,17 +1,17 @@
 const m = [
-  "/_app/immutable/start-d0341635.js",
+  "/_app/immutable/start-46d6aa5a.js",
   "/_app/immutable/components/pages/_layout.svelte-c8d86822.js",
   "/_app/immutable/assets/_layout-79d1aa81.css",
-  "/_app/immutable/components/error.svelte-c9603650.js",
+  "/_app/immutable/components/error.svelte-e443f4c0.js",
   "/_app/immutable/components/pages/_page.svelte-40467917.js",
   "/_app/immutable/assets/_page-032622b6.css",
   "/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js",
-  "/_app/immutable/chunks/singletons-4c3ef7a3.js",
+  "/_app/immutable/chunks/singletons-61926c27.js",
   "/_app/immutable/chunks/index-c78e2649.js",
   "/_app/immutable/chunks/index-b5ffb61b.js",
   "/_app/immutable/chunks/_layout-1daba58d.js",
   "/_app/immutable/chunks/0-2c99e7b8.js",
-  "/_app/immutable/chunks/1-df82ac85.js",
+  "/_app/immutable/chunks/1-a0807c38.js",
   "/_app/immutable/chunks/2-31ef06ba.js"
 ], r = [
   "/.nojekyll",
@@ -33,7 +33,7 @@ const m = [
   "/safari-pinned-tab.svg",
   "/site.webmanifest",
   "/songs.json"
-], o = "1667153441454", a = self, i = `cache${o}`, p = m.concat(r), h = new Set(p);
+], o = "1667153860852", a = self, i = `cache${o}`, p = m.concat(r), h = new Set(p);
 a.addEventListener("install", (s) => {
   s.waitUntil(
     caches.open(i).then((e) => e.addAll(p)).then(() => {
