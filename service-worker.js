@@ -1,19 +1,24 @@
 const m = [
-  "/_app/immutable/start-6034029e.js",
-  "/_app/immutable/components/pages/_layout.svelte-086cc7c6.js",
-  "/_app/immutable/assets/_layout-740aa6d6.css",
-  "/_app/immutable/components/error.svelte-a0b2a9e6.js",
-  "/_app/immutable/components/pages/_page.svelte-f1883a8e.js",
-  "/_app/immutable/assets/_page-a98aea3b.css",
+  "/_app/immutable/start-6bd879d5.js",
+  "/_app/immutable/components/pages/_layout.svelte-ff75dbf5.js",
+  "/_app/immutable/assets/_layout-c4ba9a3b.css",
+  "/_app/immutable/components/error.svelte-eb570cc9.js",
+  "/_app/immutable/components/pages/_page.svelte-44b9148e.js",
+  "/_app/immutable/assets/_page-51bfa698.css",
+  "/_app/immutable/components/pages/song/_songId_/_page.svelte-741c9071.js",
   "/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js",
-  "/_app/immutable/chunks/singletons-5cf433ce.js",
-  "/_app/immutable/chunks/index-b079c000.js",
-  "/_app/immutable/chunks/index-d5b5cf13.js",
+  "/_app/immutable/modules/pages/song/_songId_/_page.ts-9232d639.js",
+  "/_app/immutable/chunks/singletons-d6ae3831.js",
+  "/_app/immutable/chunks/index-114b6da5.js",
+  "/_app/immutable/chunks/song-aa56b44f.js",
   "/_app/immutable/chunks/_layout-1daba58d.js",
-  "/_app/immutable/chunks/0-dc86ca0b.js",
-  "/_app/immutable/chunks/1-b8fb3e05.js",
-  "/_app/immutable/chunks/2-555d4845.js"
-], r = [
+  "/_app/immutable/chunks/stores-8096c392.js",
+  "/_app/immutable/chunks/_page-1c03c40a.js",
+  "/_app/immutable/chunks/0-ac5c7f4c.js",
+  "/_app/immutable/chunks/1-ea8f89bc.js",
+  "/_app/immutable/chunks/2-d49681ad.js",
+  "/_app/immutable/chunks/3-f3e386fb.js"
+], u = [
   "/.nojekyll",
   "/android-chrome-192x192.png",
   "/android-chrome-512x512.png",
@@ -33,40 +38,40 @@ const m = [
   "/safari-pinned-tab.svg",
   "/site.webmanifest",
   "/songs.json"
-], o = "1667363207555", a = self, i = `cache${o}`, p = m.concat(r), h = new Set(p);
-a.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches.open(i).then((s) => s.addAll(p)).then(() => {
-      a.skipWaiting();
+], o = "1668545994019", t = self, i = `cache${o}`, p = m.concat(u), h = new Set(p);
+t.addEventListener("install", (s) => {
+  s.waitUntil(
+    caches.open(i).then((e) => e.addAll(p)).then(() => {
+      t.skipWaiting();
     })
   );
 });
-a.addEventListener("activate", (e) => {
-  e.waitUntil(
-    caches.keys().then(async (s) => {
-      for (const t of s)
-        t !== i && await caches.delete(t);
-      a.clients.claim();
+t.addEventListener("activate", (s) => {
+  s.waitUntil(
+    caches.keys().then(async (e) => {
+      for (const a of e)
+        a !== i && await caches.delete(a);
+      t.clients.claim();
     })
   );
 });
-async function u(e) {
-  const s = await caches.open(`offline${o}`);
+async function r(s) {
+  const e = await caches.open(`offline${o}`);
   try {
-    const t = await fetch(e);
-    return s.put(e, t.clone()), t;
-  } catch (t) {
-    const c = await s.match(e);
+    const a = await fetch(s);
+    return e.put(s, a.clone()), a;
+  } catch (a) {
+    const c = await e.match(s);
     if (c)
       return c;
-    throw t;
+    throw a;
   }
 }
-a.addEventListener("fetch", (e) => {
-  if (e.request.method !== "GET" || e.request.headers.has("range"))
+t.addEventListener("fetch", (s) => {
+  if (s.request.method !== "GET" || s.request.headers.has("range"))
     return;
-  const s = new URL(e.request.url), t = s.protocol.startsWith("http"), c = s.hostname === self.location.hostname && s.port !== self.location.port, n = s.host === self.location.host && h.has(s.pathname), l = e.request.cache === "only-if-cached" && !n;
-  t && !c && !l && e.respondWith(
-    (async () => n && await caches.match(e.request) || u(e.request))()
+  const e = new URL(s.request.url), a = e.protocol.startsWith("http"), c = e.hostname === self.location.hostname && e.port !== self.location.port, n = e.host === self.location.host && h.has(e.pathname), l = s.request.cache === "only-if-cached" && !n;
+  a && !c && !l && s.respondWith(
+    (async () => n && await caches.match(s.request) || r(s.request))()
   );
 });
