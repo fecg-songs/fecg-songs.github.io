@@ -1,27 +1,27 @@
 const l = [
-  "/_app/immutable/start-52acf307.js",
-  "/_app/immutable/components/pages/_layout.svelte-a802111a.js",
-  "/_app/immutable/assets/_layout-8f86d2da.css",
-  "/_app/immutable/components/error.svelte-e010fa93.js",
-  "/_app/immutable/components/pages/_page.svelte-b62cfe4f.js",
+  "/_app/immutable/start-5014ef89.js",
+  "/_app/immutable/components/pages/_layout.svelte-0bc4d7ae.js",
+  "/_app/immutable/assets/_layout-e812c73e.css",
+  "/_app/immutable/components/error.svelte-b7c3156f.js",
+  "/_app/immutable/components/pages/_page.svelte-4fb1dc25.js",
   "/_app/immutable/assets/_page-51bfa698.css",
-  "/_app/immutable/components/pages/song/_songId_/_page.svelte-d3fc64ea.js",
-  "/_app/immutable/components/pages/song/_songId_/_verseIndex_/_page.svelte-e6773d3c.js",
+  "/_app/immutable/components/pages/song/_songId_/_page.svelte-dc05af96.js",
+  "/_app/immutable/components/pages/song/_songId_/_verseIndex_/_page.svelte-993ca015.js",
   "/_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js",
   "/_app/immutable/modules/pages/song/_songId_/_page.ts-9232d639.js",
   "/_app/immutable/modules/pages/song/_songId_/_verseIndex_/_page.ts-83245c77.js",
-  "/_app/immutable/chunks/singletons-f963481c.js",
-  "/_app/immutable/chunks/index-8f9d2ee4.js",
-  "/_app/immutable/chunks/song-e9b24690.js",
+  "/_app/immutable/chunks/singletons-5f551f59.js",
+  "/_app/immutable/chunks/index-298ecbf7.js",
+  "/_app/immutable/chunks/song-093d0e65.js",
   "/_app/immutable/chunks/_layout-1daba58d.js",
-  "/_app/immutable/chunks/stores-5e3f2f68.js",
+  "/_app/immutable/chunks/stores-9cfd7195.js",
   "/_app/immutable/chunks/_page-1c03c40a.js",
   "/_app/immutable/chunks/_page-022daf14.js",
-  "/_app/immutable/chunks/0-68d35c51.js",
-  "/_app/immutable/chunks/1-6189598d.js",
-  "/_app/immutable/chunks/2-ff355cb8.js",
-  "/_app/immutable/chunks/3-c8faa366.js",
-  "/_app/immutable/chunks/4-8594a243.js"
+  "/_app/immutable/chunks/0-f4240cca.js",
+  "/_app/immutable/chunks/1-f2ec6c24.js",
+  "/_app/immutable/chunks/2-8e1a6c6b.js",
+  "/_app/immutable/chunks/3-84b16b78.js",
+  "/_app/immutable/chunks/4-3ad6b009.js"
 ], u = [
   "/.nojekyll",
   "/android-chrome-192x192.png",
@@ -42,7 +42,7 @@ const l = [
   "/safari-pinned-tab.svg",
   "/site.webmanifest",
   "/songs.json"
-], o = "1668952957891", t = self, p = `cache${o}`, i = l.concat(u), h = new Set(i);
+], o = "1668953262742", t = self, p = `cache${o}`, i = l.concat(u), h = new Set(i);
 t.addEventListener("install", (s) => {
   s.waitUntil(
     caches.open(p).then((e) => e.addAll(i)).then(() => {
